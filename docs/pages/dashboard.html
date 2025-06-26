@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Dashboard - Singapore Policy Impact Assessment</title>
+    <title>Interactive Dashboard - Singapore Policy Impa        <!-- Key Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalPolicies">16</div>
+                <div class="stat-label">Total Policies</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="verifiedPolicies">13</div>
+                <div class="stat-label">Verified Policies</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">87.6</div>
+                <div class="stat-label">Transparency Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">88%</div>
+                <div class="stat-label">Scientific Confidence</div>
+            </div>
+        </div>e>
     
     <meta name="description" content="Interactive dashboard for Singapore policy impact analysis with real-time data visualization">
     <meta name="keywords" content="Singapore, policy dashboard, data visualization, government effectiveness">
@@ -453,10 +471,41 @@
 
         // Initialize dashboard
         document.addEventListener('DOMContentLoaded', function() {
-            initializeCharts();
-            populateTable();
-            setupFilters();
+            try {
+                // Update statistics
+                updateStatistics();
+                
+                // Initialize all charts
+                initializeCharts();
+                
+                // Populate data table
+                populateTable();
+                
+                // Setup interactive filters
+                setupFilters();
+                
+                console.log('Dashboard initialized successfully');
+            } catch (error) {
+                console.error('Error initializing dashboard:', error);
+                showErrorMessage('Failed to load dashboard components. Please refresh the page.');
+            }
         });
+        
+        function updateStatistics() {
+            const totalPolicies = policyData.length;
+            const verifiedPolicies = policyData.filter(p => p.verified).length;
+            
+            document.getElementById('totalPolicies').textContent = totalPolicies;
+            document.getElementById('verifiedPolicies').textContent = verifiedPolicies;
+        }
+        
+        function showErrorMessage(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.style.cssText = 'background: #fed7d7; color: #742a2a; padding: 15px; margin: 20px; border-radius: 5px; text-align: center;';
+            errorDiv.textContent = message;
+            document.querySelector('.dashboard-container').insertBefore(errorDiv, document.querySelector('.stats-grid'));
+        }
 
         function initializeCharts() {
             // Category Chart
