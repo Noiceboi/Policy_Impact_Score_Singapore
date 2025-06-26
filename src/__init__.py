@@ -9,7 +9,7 @@ __version__ = "2.0.0"
 __author__ = "Policy Impact Assessment Team"
 __email__ = "policy-assessment@example.com"
 
-from .models import Policy, PolicyAssessment, PolicyDatabase
+from .models import Policy, PolicyAssessment, PolicyCollection
 from .framework import PolicyAssessmentFramework
 from .mcda import AHPAnalyzer, ELECTREAnalyzer, SensitivityAnalyzer
 from .validation import DataValidator
@@ -17,7 +17,7 @@ from .validation import DataValidator
 __all__ = [
     "Policy",
     "PolicyAssessment", 
-    "PolicyDatabase",
+    "PolicyCollection",
     "PolicyAssessmentFramework",
     "AHPAnalyzer",
     "ELECTREAnalyzer",
