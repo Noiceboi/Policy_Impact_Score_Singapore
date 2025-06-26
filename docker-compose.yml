@@ -1,0 +1,174 @@
+version: '3.8'
+
+services:
+  # Main application service
+  policy-assessment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: policy-assessment-app
+    ports:
+      - "8050:8050"
+    volumes:
+      # Mount data directory for persistence
+      - ./data:/app/data:ro
+      - ./output:/app/output
+      - ./logs:/app/logs
+    environment:
+      - PYTHONPATH=/app/src
+      - LOG_LEVEL=INFO
+      - DASHBOARD_HOST=0.0.0.0
+      - DASHBOARD_PORT=8050
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8050/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - policy-network
+
+  # Development service with hot reload
+  policy-assessment-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: policy-assessment-dev
+    ports:
+      - "8051:8050"
+      - "5678:5678"  # Debug port
+    volumes:
+      # Mount source code for development
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - ./tests:/app/tests
+      - ./main.py:/app/main.py
+    environment:
+      - PYTHONPATH=/app/src
+      - LOG_LEVEL=DEBUG
+      - DASHBOARD_HOST=0.0.0.0
+      - DASHBOARD_PORT=8050
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - development
+
+  # Redis for caching (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: policy-assessment-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - cache
+
+  # PostgreSQL for production data storage (optional)
+  postgres:
+    image: postgres:15-alpine
+    container_name: policy-assessment-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    environment:
+      POSTGRES_DB: policy_assessment
+      POSTGRES_USER: policy_user
+      POSTGRES_PASSWORD: policy_pass
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - database
+
+  # Nginx reverse proxy (optional)
+  nginx:
+    image: nginx:alpine
+    container_name: policy-assessment-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - policy-assessment
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - production
+
+  # Monitoring with Prometheus (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: policy-assessment-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - monitoring
+
+  # Grafana for dashboards (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: policy-assessment-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: false
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - policy-network
+    profiles:
+      - monitoring
+
+networks:
+  policy-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local
+  postgres_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+# Override for local development
+# Create docker-compose.override.yml for local customizations

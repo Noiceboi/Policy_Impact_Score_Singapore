@@ -1,29 +1,32 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "policy-impact-assessment-singapore"
-version = "2.0.0"
-description = "A comprehensive framework for assessing Singapore government policy impacts using MCDA methods"
+dynamic = ["version"]
+description = "A comprehensive framework for evaluating Singapore government policy impacts"
 readme = "README.md"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 authors = [
     {name = "Policy Impact Assessment Team", email = "policy-assessment@example.com"}
 ]
+maintainers = [
+    {name = "Policy Impact Assessment Team", email = "policy-assessment@example.com"}
+]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Information Analysis",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Topic :: Scientific/Engineering",
-    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Programming Language :: Python :: 3.12",
 ]
-keywords = ["policy", "assessment", "singapore", "mcda", "government", "analytics"]
+keywords = ["policy", "impact", "assessment", "singapore", "mcda", "government", "analysis"]
 requires-python = ">=3.8"
 dependencies = [
     "pandas>=1.5.0",

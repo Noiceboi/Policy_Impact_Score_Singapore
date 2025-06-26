@@ -1,0 +1,32 @@
+[flake8]
+max-line-length = 88
+max-complexity = 10
+extend-ignore = 
+    # E203: whitespace before ':'
+    E203,
+    # W503: line break before binary operator
+    W503,
+    # E501: line too long (handled by black)
+    E501
+exclude = 
+    .git,
+    __pycache__,
+    build,
+    dist,
+    .eggs,
+    *.egg-info,
+    .venv,
+    .mypy_cache,
+    .pytest_cache,
+    htmlcov
+per-file-ignores =
+    # __init__.py can have unused imports
+    __init__.py:F401
+    # tests can have unused imports and long lines
+    tests/*:F401,E501
+    # setup.py can have long lines
+    setup.py:E501
+
+# Import order
+import-order-style = google
+application-import-names = policy_impact

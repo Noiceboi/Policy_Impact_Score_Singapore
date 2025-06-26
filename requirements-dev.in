@@ -1,0 +1,29 @@
+# Development dependencies for Policy Impact Assessment Framework
+-r requirements.txt
+
+# Testing
+pytest>=6.0
+pytest-cov>=2.0
+pytest-mock>=3.0
+coverage>=6.0
+
+# Code quality
+black>=22.0
+flake8>=4.0
+mypy>=0.910
+pylint>=2.10
+isort>=5.10
+
+# Security
+bandit>=1.7
+pip-audit>=2.0
+
+# Git hooks
+pre-commit>=2.15
+
+# Dependency management
+pip-tools>=6.0
+
+# Documentation
+sphinx>=4.0
+sphinx-rtd-theme>=1.0
