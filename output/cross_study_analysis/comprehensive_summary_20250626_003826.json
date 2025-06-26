@@ -1,0 +1,37 @@
+{
+  "analysis_date": "2025-06-26T00:38:27.199249",
+  "total_policies": 10,
+  "total_assessments": 12,
+  "high_integrity_policies": 2,
+  "average_impact_score": 3.98,
+  "average_integrity_score": 0.606,
+  "data_coverage": {
+    "policies_with_multiple_assessments": 2,
+    "categories_covered": 10,
+    "assessor_organizations": 12
+  },
+  "top_performing_policies": [
+    {
+      "policy_name": "Housing Development Act",
+      "category": "Phát triển đô thị",
+      "Overall Impact Score": 4.9
+    },
+    {
+      "policy_name": "Central Provident Fund",
+      "category": "An sinh xã hội",
+      "Overall Impact Score": 4.45
+    },
+    {
+      "policy_name": "Monetary Authority of Singapore Act",
+      "category": "Kinh tế tài chính",
+      "Overall Impact Score": 4.45
+    }
+  ],
+  "key_findings": [
+    "Total 10 Singapore policies analyzed across 10 categories",
+    "2 policies meet high data integrity standards",
+    "Average policy impact score: 3.98/5.0",
+    "Data integrity rate: 20.0%",
+    "Assessment coverage: 12 assessments from 12 organizations"
+  ]
+}

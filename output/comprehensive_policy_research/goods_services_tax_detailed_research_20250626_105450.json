@@ -1,0 +1,132 @@
+{
+  "policy_name": "Goods & Services Tax (1994)",
+  "implementation_date": "1994-04-01",
+  "current_status": "Active - 30 years",
+  "fiscal_efficiency_evidence": {
+    "tax_revenue_diversification": {
+      "income_tax_dependency_1993": 45.2,
+      "income_tax_dependency_2023": 31.7,
+      "gst_contribution_2023": 22.4,
+      "improvement": "Reduced reliance on volatile income tax",
+      "source": "IRAS Annual Reports"
+    },
+    "collection_efficiency": {
+      "gst_collection_cost": 0.28,
+      "compliance_rate": 97.8,
+      "tax_gap": 2.1,
+      "digital_filing_rate": 99.4,
+      "source": "IRAS Tax Statistics"
+    },
+    "revenue_stability": {
+      "revenue_volatility_coefficient": 0.12,
+      "gst_revenue_growth_consistency": "Steady 4-6% annual growth",
+      "source": "Ministry of Finance Budget Documents"
+    }
+  },
+  "competitiveness_evidence": {
+    "corporate_tax_optimization": {
+      "corporate_tax_rate_1993": 33.0,
+      "corporate_tax_rate_2023": 17.0,
+      "reduction_enabled_by_gst": "GST allowed corporate rate cuts",
+      "fdi_attraction": "Enhanced business competitiveness",
+      "source": "Economic Development Board Reports"
+    },
+    "business_cost_reduction": {
+      "input_tax_credit_efficiency": "Full credit system reduces business costs",
+      "export_competitiveness": "Zero-rating enhances export competitiveness",
+      "administrative_burden": "Streamlined vs multiple sales taxes",
+      "source": "Singapore Business Federation Surveys"
+    },
+    "international_ranking_improvement": {
+      "ease_of_paying_taxes_rank": 8,
+      "total_tax_rate": 21.0,
+      "time_to_comply": 49,
+      "source": "World Bank Doing Business Reports"
+    }
+  },
+  "gdp_impact_evidence": {
+    "gdp_growth_correlation": {
+      "pre_gst_growth_1990_1993": 8.2,
+      "post_gst_growth_1995_2000": 8.7,
+      "correlation_strength": "Strong positive correlation with sustained growth",
+      "source": "MTI Economic Survey"
+    },
+    "sectoral_productivity_gains": {
+      "services_sector_growth": "Enhanced by GST efficiency",
+      "manufacturing_export_competitiveness": "Improved through zero-rating",
+      "retail_sector_formalization": "Increased formal business registration",
+      "source": "Department of Statistics Sectoral Analysis"
+    }
+  },
+  "distributional_impact_evidence": {
+    "regressivity_mitigation": {
+      "gst_voucher_scheme_coverage": 1.4,
+      "offset_percentage_for_lowest_quintile": 120,
+      "net_progressive_effect": "Bottom 20% receive net transfer",
+      "source": "Ministry of Finance GST Impact Studies"
+    },
+    "consumer_price_impact": {
+      "one_time_price_increase_1994": 3.2,
+      "subsequent_inflation_impact": "Minimal ongoing effect",
+      "price_transparency_improvement": "All-inclusive pricing",
+      "source": "Monetary Authority of Singapore Price Studies"
+    }
+  },
+  "public_feedback": {
+    "overall_satisfaction_score": 6.4,
+    "public_awareness_level": 94.2,
+    "effectiveness_rating": 7.1,
+    "complaints_per_1000_businesses": 15.6,
+    "positive_media_coverage": 45.3,
+    "survey_sample_size": 5200,
+    "survey_date": "2023-Q2",
+    "key_public_concerns": [
+      "Regressive impact on low-income households",
+      "GST rate increases over time (3% to 9%)",
+      "Complexity in determining GST liability for some services",
+      "Impact on cost of living during rate increases",
+      "Digital services GST compliance burden for small businesses"
+    ],
+    "success_stories": [
+      "Enabled significant corporate tax reductions",
+      "Improved government fiscal sustainability",
+      "Enhanced Singapore's tax competitiveness internationally",
+      "Efficient and transparent tax system",
+      "Strong revenue base for public spending"
+    ],
+    "business_testimonials": [
+      "GST system is efficient and predictable for business planning",
+      "Input tax credits help manage cash flow effectively",
+      "Digital GST filing saves significant administrative time",
+      "Zero-rating for exports enhanced our competitiveness"
+    ]
+  },
+  "international_validation": {
+    "oecd_tax_policy_review": {
+      "gst_system_rating": "Exemplary",
+      "efficiency_rank": 2,
+      "compliance_rating": "Very High"
+    },
+    "world_bank_doing_business": {
+      "paying_taxes_rank": 8,
+      "total_tax_rate": 21.0,
+      "time_to_comply": 49,
+      "note": "Among most efficient tax systems"
+    },
+    "imf_fiscal_monitor": {
+      "revenue_efficiency": "Very High",
+      "system_design": "Best practice model"
+    },
+    "pwc_paying_taxes_study": {
+      "overall_rank": 7,
+      "digital_administration_score": 94.2
+    }
+  },
+  "gdp_correlation": {
+    "business_competitiveness_correlation": 0.73,
+    "investment_attraction_correlation": 0.68,
+    "fiscal_stability_correlation": 0.81,
+    "overall_gdp_impact": "Positive correlation with sustained growth",
+    "estimated_gdp_contribution": "0.7% of annual GDP growth attributable to tax efficiency"
+  }
+}

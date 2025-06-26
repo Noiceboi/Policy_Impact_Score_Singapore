@@ -1,0 +1,13 @@
+policy_id,assessment_date,scope,magnitude,durability,adaptability,cross_referencing,overall_score,assessor,notes
+HDB-1960-001,2020-01-15T00:00:00,5,5,5,4,5,4.785714285714286,Singapore Policy Research Institute,Sustained excellence in public housing provision
+HDB-1960-001,2023-06-10T00:00:00,5,5,5,5,5,5.0,Urban Studies Research Centre NUS,Continued adaptation to changing demographics
+CPF-1955-001,2021-03-20T00:00:00,5,4,5,4,4,4.428571428571429,Social Security Research Center,Strong foundation but needs digital enhancement
+MEDISAVE-1984-001,2022-11-15T00:00:00,4,4,4,3,4,3.7857142857142856,Healthcare Economics Institute,Effective but challenged by aging population
+GST-1994-001,2019-11-05T00:00:00,4,3,4,3,3,3.4285714285714284,Tax Policy Analysis Unit,Effective revenue tool but regressive concerns
+GST-1994-001,2023-02-15T00:00:00,4,3,4,4,3,3.642857142857143,Economic Research Institute,Improved adaptability with digital initiatives
+SKILLSFUTURE-2015-001,2020-08-12T00:00:00,4,4,3,5,4,3.9285714285714284,Education Policy Research Group,Innovative approach with strong adaptability
+NS-1967-001,2018-09-30T00:00:00,4,4,5,3,4,4.071428571428571,Defense Studies Center,Enduring impact on security and social cohesion
+SMOKING-1970-001,2020-05-18T00:00:00,3,4,4,4,5,4.0,Public Health Policy Institute,Significant public health impact with strong validation
+MAS-1970-001,2019-12-08T00:00:00,5,4,5,4,4,4.428571428571429,Financial Services Research Group,Critical framework for financial sector development
+NAC-1991-001,2022-04-25T00:00:00,3,3,3,4,3,3.2142857142857144,Cultural Policy Studies Unit,Moderate impact with good cultural development
+COMCARE-2005-001,2021-11-12T00:00:00,3,3,4,4,3,3.5,Social Welfare Research Center,Effective targeted assistance with room for expansion

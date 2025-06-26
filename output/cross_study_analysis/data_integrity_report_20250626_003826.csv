@@ -1,0 +1,11 @@
+Policy ID,Policy Name,Category,Assessment Count,Assessor Diversity,Score Consistency,Time Coverage,Data Completeness,Overall Integrity Score,Data Quality Level,Validation Status
+HDB-1960-001,Housing Development Act,Phát triển đô thị,2,2,0.909,0.68,1.0,0.834,High,Validated
+CPF-1955-001,Central Provident Fund,An sinh xã hội,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+MEDISAVE-1984-001,Medisave Scheme,Chăm sóc sức khỏe,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+GST-1994-001,Goods and Services Tax,Thuế,2,2,0.909,0.656,1.0,0.83,High,Validated
+SKILLSFUTURE-2015-001,SkillsFuture Initiative,Giáo dục,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+NS-1967-001,National Service,An ninh quốc phòng,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+SMOKING-1970-001,Smoking (Prohibition in Certain Places) Act,Giữ gìn trật tự đô thị,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+MAS-1970-001,Monetary Authority of Singapore Act,Kinh tế tài chính,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+NAC-1991-001,National Arts Council,Văn hóa xã hội,1,1,1.0,0.0,1.0,0.55,Low,Needs Review
+COMCARE-2005-001,ComCare Assistance Scheme,Phúc lợi xã hội,1,1,1.0,0.0,1.0,0.55,Low,Needs Review

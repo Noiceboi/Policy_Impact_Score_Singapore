@@ -1,0 +1,117 @@
+{
+  "policy_name": "National Service (1967)",
+  "implementation_date": "1967-03-01",
+  "current_status": "Active - 57 years",
+  "defense_capability_evidence": {
+    "military_readiness": {
+      "total_ns_trained_personnel": "Over 1 million since 1967",
+      "operational_readiness_rating": "Very High (classified specifics)",
+      "defense_capability_index": "Top 20 globally despite small size",
+      "source": "MINDEF Annual Reports, International Defense Rankings"
+    },
+    "deterrence_effectiveness": {
+      "regional_security_incidents": "Zero major external threats materialized",
+      "military_doctrine_success": "Total Defense concept proven effective",
+      "alliance_partnerships": "Strong bilateral defense relationships",
+      "source": "Singapore Armed Forces Doctrine Publications"
+    }
+  },
+  "social_cohesion_evidence": {
+    "national_unity_building": {
+      "inter_racial_bonding_survey_scores": 8.4,
+      "national_identity_strength": "Significantly enhanced through shared experience",
+      "cross_cultural_understanding": "Measurable improvement in racial harmony surveys",
+      "source": "Institute of Policy Studies National Identity Surveys"
+    },
+    "leadership_development": {
+      "ns_alumni_in_leadership_positions": 89.2,
+      "corporate_leadership_correlation": "Strong correlation with career progression",
+      "civic_engagement_rates": "Higher among NS alumni",
+      "source": "Leadership Development Studies"
+    }
+  },
+  "character_development_evidence": {
+    "discipline_and_resilience": {
+      "workplace_discipline_ratings": "NS alumni score higher",
+      "stress_management_capabilities": "Enhanced psychological resilience",
+      "teamwork_effectiveness": "Superior collaboration skills",
+      "source": "Human Resource Development Studies"
+    },
+    "civic_responsibility": {
+      "voting_participation_rates": "Higher among NS alumni",
+      "community_service_involvement": "Increased volunteerism rates",
+      "law_abidance_correlation": "Lower crime rates among NS alumni",
+      "source": "Civic Engagement Research"
+    }
+  },
+  "economic_impact_evidence": {
+    "defense_industry_development": {
+      "defense_sector_gdp_contribution": 1.2,
+      "defense_technology_exports": "Significant arms export industry",
+      "r_and_d_investment": "High-tech military innovation",
+      "source": "Defense Science and Technology Agency Reports"
+    },
+    "skills_and_training_value": {
+      "technical_skills_acquired": "Valuable for civilian careers",
+      "productivity_enhancement": "Discipline and teamwork benefits",
+      "economic_opportunity_cost": "Offset by long-term productivity gains",
+      "source": "Economic Impact of National Service Studies"
+    }
+  },
+  "public_feedback": {
+    "overall_satisfaction_score": 6.8,
+    "public_awareness_level": 98.7,
+    "effectiveness_rating": 8.2,
+    "complaints_per_1000_servicemen": 45.3,
+    "positive_media_coverage": 64.7,
+    "survey_sample_size": 18000,
+    "survey_date": "2023-Q1",
+    "key_public_concerns": [
+      "Two years duration seen as long by some",
+      "Gender inequality (only males serve)",
+      "Economic opportunity cost during prime career-building years",
+      "Training injuries and safety concerns",
+      "Work-life balance challenges during reservist training"
+    ],
+    "success_stories": [
+      "Created strong national identity across diverse population",
+      "Developed disciplined and resilient workforce",
+      "Maintained peace and security for over 50 years",
+      "Built strong defense capabilities despite small population",
+      "Fostered inter-racial harmony and understanding"
+    ],
+    "servicemen_testimonials": [
+      "NS taught me leadership and discipline that helped my career",
+      "Made lifelong friends across all racial and social backgrounds",
+      "Proud to contribute to Singapore's security and independence",
+      "NS experience prepared me for challenges in civilian life",
+      "Learned valuable technical skills that enhanced my employability"
+    ]
+  },
+  "international_validation": {
+    "global_peace_index": {
+      "singapore_rank": 5,
+      "score": 1.347,
+      "note": "High security with efficient defense spending"
+    },
+    "global_firepower_index": {
+      "military_strength_rank": 26,
+      "note": "Exceptional capability relative to size"
+    },
+    "institute_for_economics_and_peace": {
+      "defense_efficiency": "Very High",
+      "social_cohesion_contribution": "Positive"
+    },
+    "rand_corporation_studies": {
+      "conscription_model_effectiveness": "Highly successful",
+      "social_integration_impact": "Significant positive"
+    }
+  },
+  "gdp_correlation": {
+    "defense_industry_correlation": 0.45,
+    "social_stability_correlation": 0.67,
+    "human_capital_development_correlation": 0.58,
+    "overall_gdp_impact": "Moderate positive correlation",
+    "estimated_gdp_contribution": "0.3% of annual GDP growth attributable to social stability and defense capabilities"
+  }
+}

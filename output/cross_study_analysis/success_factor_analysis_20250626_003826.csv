@@ -1,0 +1,11 @@
+Policy Name,Category,Overall Score,Success Level,Strongest Factor,Strongest Score,Weakest Factor,Weakest Score,Score Range
+Housing Development Act,Phát triển đô thị,4.9,High,Scope,5.0,Adaptability,4.5,0.5
+Central Provident Fund,An sinh xã hội,4.45,High,Scope,5.0,Magnitude,4.0,1.0
+Medisave Scheme,Chăm sóc sức khỏe,3.8,Medium,Scope,4.0,Adaptability,3.0,1.0
+Goods and Services Tax,Thuế,3.55,Medium,Scope,4.0,Magnitude,3.0,1.0
+SkillsFuture Initiative,Giáo dục,3.9,Medium,Adaptability,5.0,Durability,3.0,2.0
+National Service,An ninh quốc phòng,4.1,High,Durability,5.0,Adaptability,3.0,2.0
+Smoking (Prohibition in Certain Places) Act,Giữ gìn trật tự đô thị,3.95,Medium,Cross_Referencing,5.0,Scope,3.0,2.0
+Monetary Authority of Singapore Act,Kinh tế tài chính,4.45,High,Scope,5.0,Magnitude,4.0,1.0
+National Arts Council,Văn hóa xã hội,3.2,Medium,Adaptability,4.0,Scope,3.0,1.0
+ComCare Assistance Scheme,Phúc lợi xã hội,3.5,Medium,Durability,4.0,Scope,3.0,1.0

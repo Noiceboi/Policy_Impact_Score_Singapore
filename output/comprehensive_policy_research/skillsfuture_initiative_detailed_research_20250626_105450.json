@@ -1,0 +1,108 @@
+{
+  "policy_name": "SkillsFuture Initiative (2015)",
+  "implementation_date": "2015-01-01",
+  "current_status": "Active - 9 years",
+  "skills_development_evidence": {
+    "participation_rates": {
+      "total_skillsfuture_credit_users": 1.8,
+      "participation_rate_eligible_population": 62.4,
+      "annual_course_completions": 450000,
+      "source": "SkillsFuture Singapore Annual Report 2023"
+    },
+    "skills_certification_outcomes": {
+      "industry_recognized_certifications_earned": 320000,
+      "skills_framework_alignment": 89.2,
+      "emerging_skills_coverage": "AI, cybersecurity, sustainability",
+      "source": "Workforce Singapore Skills Mapping"
+    },
+    "career_progression_impact": {
+      "salary_increase_post_training": 18.3,
+      "promotion_rate_within_2_years": 34.7,
+      "career_transition_success_rate": 71.2,
+      "source": "Post-Training Employment Outcomes Survey 2023"
+    }
+  },
+  "productivity_evidence": {
+    "enterprise_productivity_gains": {
+      "participating_companies_productivity_increase": 12.8,
+      "innovation_capacity_improvement": "Measurable increase in R&D activities",
+      "digital_transformation_acceleration": "67% of SMEs adopted new technologies",
+      "source": "Enterprise Singapore Productivity Surveys"
+    },
+    "sectoral_transformation": {
+      "manufacturing_sector_upskilling": "78% of workers received digital skills training",
+      "services_sector_digitalization": "Significant automation adoption",
+      "new_economy_jobs_creation": "Over 100,000 new digital economy jobs",
+      "source": "Committee on the Future Economy Progress Reports"
+    }
+  },
+  "labor_market_evidence": {
+    "workforce_resilience": {
+      "job_displacement_mitigation": "Successful reskilling during COVID-19",
+      "industry_transition_facilitation": "Cross-sector mobility increased",
+      "unemployment_rate_stability": "Maintained low unemployment despite disruptions",
+      "source": "Ministry of Manpower Labor Market Reports"
+    },
+    "lifelong_learning_culture": {
+      "adult_learning_participation_rate": 52.3,
+      "employer_training_investment_increase": 23.4,
+      "learning_mindset_survey_scores": "8.1/10 (significantly improved)",
+      "source": "Institute for Adult Learning Studies"
+    }
+  },
+  "public_feedback": {
+    "overall_satisfaction_score": 7.6,
+    "public_awareness_level": 91.3,
+    "effectiveness_rating": 7.8,
+    "complaints_per_1000_users": 8.2,
+    "positive_media_coverage": 73.8,
+    "survey_sample_size": 12000,
+    "survey_date": "2023-Q4",
+    "key_public_concerns": [
+      "Limited course availability for popular programs",
+      "Credit amount insufficient for comprehensive upskilling",
+      "Time constraints for working adults to attend courses",
+      "Quality variation among training providers",
+      "Limited career guidance and counseling support"
+    ],
+    "success_stories": [
+      "Mid-career professionals successfully transitioned to tech sectors",
+      "SME employees gained digital skills improving business competitiveness",
+      "Older workers acquired new skills extending career longevity",
+      "Strong employer participation and co-funding",
+      "Comprehensive skills frameworks guiding development"
+    ],
+    "citizen_testimonials": [
+      "SkillsFuture helped me transition from manufacturing to data analytics",
+      "My $500 credit enabled professional certification that doubled my salary",
+      "Company supported my AI course through SkillsFuture - now leading digital transformation",
+      "At 45, I learned coding and started new career in software development"
+    ]
+  },
+  "international_validation": {
+    "oecd_skills_strategy": {
+      "adult_learning_participation": "Above OECD average",
+      "skills_system_effectiveness": "High",
+      "policy_innovation": "Leading example"
+    },
+    "world_bank_human_capital_index": {
+      "skill_development_component": "Very Strong",
+      "lifelong_learning_score": "Top quartile"
+    },
+    "unesco_institute_for_lifelong_learning": {
+      "recognition": "UNESCO Learning City Award",
+      "best_practice_status": "Global reference model"
+    },
+    "mckinsey_global_institute": {
+      "reskilling_effectiveness": "Among world's best",
+      "future_of_work_preparedness": "Leading position"
+    }
+  },
+  "gdp_correlation": {
+    "productivity_growth_correlation": 0.69,
+    "innovation_capacity_correlation": 0.74,
+    "labor_market_flexibility_correlation": 0.71,
+    "overall_gdp_impact": "Emerging positive correlation",
+    "estimated_gdp_contribution": "0.5% of annual GDP growth attributable to skills development"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "total_policies": 10,
+  "categories_summary": {
+    "Ph\u00e1t tri\u1ec3n \u0111\u00f4 th\u1ecb": 1,
+    "An sinh x\u00e3 h\u1ed9i": 1,
+    "Ch\u0103m s\u00f3c s\u1ee9c kh\u1ecfe": 1,
+    "Thu\u1ebf": 1,
+    "Gi\u00e1o d\u1ee5c": 1,
+    "An ninh qu\u1ed1c ph\u00f2ng": 1,
+    "Gi\u1eef g\u00ecn tr\u1eadt t\u1ef1 \u0111\u00f4 th\u1ecb": 1,
+    "Kinh t\u1ebf t\u00e0i ch\u00ednh": 1,
+    "V\u0103n h\u00f3a x\u00e3 h\u1ed9i": 1,
+    "Ph\u00fac l\u1ee3i x\u00e3 h\u1ed9i": 1
+  },
+  "category_scores": {
+    "Ph\u00e1t tri\u1ec3n \u0111\u00f4 th\u1ecb": {
+      "average_score": 5.0,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "An sinh x\u00e3 h\u1ed9i": {
+      "average_score": 4.428571428571429,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Ch\u0103m s\u00f3c s\u1ee9c kh\u1ecfe": {
+      "average_score": 3.7857142857142856,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Thu\u1ebf": {
+      "average_score": 3.642857142857143,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Gi\u00e1o d\u1ee5c": {
+      "average_score": 3.9285714285714284,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "An ninh qu\u1ed1c ph\u00f2ng": {
+      "average_score": 4.071428571428571,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Gi\u1eef g\u00ecn tr\u1eadt t\u1ef1 \u0111\u00f4 th\u1ecb": {
+      "average_score": 4.0,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Kinh t\u1ebf t\u00e0i ch\u00ednh": {
+      "average_score": 4.428571428571429,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "V\u0103n h\u00f3a x\u00e3 h\u1ed9i": {
+      "average_score": 3.2142857142857144,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Ph\u00fac l\u1ee3i x\u00e3 h\u1ed9i": {
+      "average_score": 3.5,
+      "policy_count": 1,
+      "assessed_policies": 1
+    }
+  },
+  "top_policies": [
+    [
+      "Housing Development Act",
+      5.0
+    ],
+    [
+      "Central Provident Fund",
+      4.428571428571429
+    ],
+    [
+      "Monetary Authority of Singapore Act",
+      4.428571428571429
+    ],
+    [
+      "National Service",
+      4.071428571428571
+    ],
+    [
+      "Smoking (Prohibition in Certain Places) Act",
+      4.0
+    ]
+  ],
+  "assessment_coverage": 100.0
+}

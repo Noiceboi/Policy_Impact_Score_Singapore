@@ -1,0 +1,60 @@
+{
+  "total_policies": 6,
+  "categories_summary": {
+    "Ph\u00e1t tri\u1ec3n \u0111\u00f4 th\u1ecb": 2,
+    "An sinh x\u00e3 h\u1ed9i": 1,
+    "Thu\u1ebf": 1,
+    "Gi\u00e1o d\u1ee5c": 1,
+    "Ch\u0103m s\u00f3c s\u1ee9c kh\u1ecfe": 1
+  },
+  "category_scores": {
+    "Ph\u00e1t tri\u1ec3n \u0111\u00f4 th\u1ecb": {
+      "average_score": 4.392857142857142,
+      "policy_count": 2,
+      "assessed_policies": 2
+    },
+    "An sinh x\u00e3 h\u1ed9i": {
+      "average_score": 4.428571428571429,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Thu\u1ebf": {
+      "average_score": 3.642857142857143,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Gi\u00e1o d\u1ee5c": {
+      "average_score": 3.9285714285714284,
+      "policy_count": 1,
+      "assessed_policies": 1
+    },
+    "Ch\u0103m s\u00f3c s\u1ee9c kh\u1ecfe": {
+      "average_score": 3.7857142857142856,
+      "policy_count": 1,
+      "assessed_policies": 1
+    }
+  },
+  "top_policies": [
+    [
+      "Housing Development Act",
+      5.0
+    ],
+    [
+      "Central Provident Fund",
+      4.428571428571429
+    ],
+    [
+      "SkillsFuture Initiative",
+      3.9285714285714284
+    ],
+    [
+      "Medisave Scheme",
+      3.7857142857142856
+    ],
+    [
+      "Digital Government Services Initiative",
+      3.7857142857142856
+    ]
+  ],
+  "assessment_coverage": 100.0
+}

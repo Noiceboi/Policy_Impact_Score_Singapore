@@ -1,0 +1,13 @@
+policy_id,assessment_date,scope,magnitude,durability,adaptability,cross_referencing,assessor,notes
+HDB-001,2020-01-15,5,5,5,4,5,Singapore Policy Institute,Comprehensive assessment of HDB impact after 60 years
+HDB-001,2022-06-10,5,5,5,5,5,Urban Studies Research Group,Updated assessment showing continued excellence and adaptation
+CPF-001,2021-03-20,5,4,5,4,4,Social Security Research Center,Strong performance across all metrics with room for digital enhancement
+GST-001,2019-11-05,4,3,4,3,3,Tax Policy Analysis Unit,Effective but requires modernization for digital economy
+GST-001,2023-02-15,4,3,4,4,3,Economic Research Institute,Improved adaptability with recent digital tax initiatives
+EDU-001,2020-08-12,4,4,3,5,4,Education Policy Research Group,Innovative approach with strong adaptability mechanisms
+HC-001,2021-12-03,4,4,4,3,4,Healthcare Economics Institute,Solid foundation but needs enhancement for aging population
+SEC-001,2018-09-30,4,4,5,3,4,Defense Studies Center,Enduring impact on national security and social cohesion
+UO-001,2020-05-18,3,4,4,4,5,Public Health Policy Institute,Significant public health impact with strong research validation
+FIN-001,2019-12-08,5,4,5,4,4,Financial Services Research Group,Critical framework for Singapore's financial sector development
+CUL-001,2022-04-25,3,3,3,4,3,Cultural Policy Studies Unit,Moderate impact with good adaptability to changing cultural landscape
+WEL-001,2021-11-12,3,3,4,4,3,Social Welfare Research Center,Effective targeted assistance with room for broader impact

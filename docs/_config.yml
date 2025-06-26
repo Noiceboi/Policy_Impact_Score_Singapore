@@ -1,0 +1,102 @@
+# GitHub Pages Configuration for Singapore Policy Impact Assessment
+title: "Singapore Policy Impact Assessment Framework"
+description: "Comprehensive scientific assessment of Singapore's policy impact using international validation and multi-criteria decision analysis"
+author: "Policy Impact Assessment Framework"
+email: "your.email@example.com"
+
+# GitHub repository
+repository: "Noiceboi/Policy_Impact_Score_Singapore"
+github_username: "Noiceboi"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings
+url: "https://yourusername.github.io"
+baseurl: "/Policy_Impact_Score_Singapore"
+
+# Navigation
+navigation:
+  - title: "Overview"
+    url: "/index.html"
+  - title: "Methodology"
+    url: "/pages/methodology.html"
+  - title: "Validation"
+    url: "/pages/validation.html"
+  - title: "Reports"
+    url: "/pages/reports.html"
+
+# Social links
+social:
+  - title: "GitHub"
+    url: "https://github.com/yourusername/Policy_Impact_Score_Singapore"
+  - title: "Email"
+    url: "mailto:your.email@example.com"
+
+# Analytics
+google_analytics: "G-XXXXXXXXXX"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  reports:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "reports"
+    values:
+      layout: "report"
+
+# SEO
+logo: "/assets/images/logo.png"
+twitter:
+  username: "yourusername"
+  card: "summary_large_image"
+
+facebook:
+  app_id: "1234567890"
+  publisher: "https://www.facebook.com/yourpage"
+
+# Schema.org
+webmaster_verifications:
+  google: "1234567890"
+  bing: "1234567890"
+
+# Timezone
+timezone: "Asia/Singapore"
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed

@@ -1,0 +1,90 @@
+{
+  "assessment_timestamp": "2025-06-26T12:21:52.087037",
+  "validity_scores": {
+    "framework_structure": 100,
+    "data_completeness": 100,
+    "documentation_quality": 80,
+    "citation_transparency": 55,
+    "overall_validity": 83.75
+  },
+  "excel_files_analyzed": 3,
+  "reports_analyzed": 4,
+  "framework_completeness_percent": 100.0,
+  "detailed_analysis": {
+    "excel_analysis": [
+      {
+        "file": "output/expanded_analysis/singapore_expanded_policy_analysis_20250626_112947.xlsx",
+        "size": 10766,
+        "modified": "2025-06-26T11:29:48.002175",
+        "data_completeness": "HIGH"
+      },
+      {
+        "file": "output/cross_study_analysis/singapore_policy_comprehensive_analysis_20250626_003826.xlsx",
+        "size": 13295,
+        "modified": "2025-06-26T00:38:27.197257",
+        "data_completeness": "HIGH"
+      },
+      {
+        "file": "output/comprehensive_policy_research/singapore_policy_comprehensive_research_20250626_105450.xlsx",
+        "size": 7660,
+        "modified": "2025-06-26T10:54:51.645156",
+        "data_completeness": "MEDIUM"
+      }
+    ],
+    "report_analysis": [
+      {
+        "file": "SCIENTIFIC_RIGOR_ASSESSMENT.md",
+        "word_count": 1150,
+        "line_count": 198,
+        "quality": "COMPREHENSIVE",
+        "scientific_score": 9
+      },
+      {
+        "file": "EXPANDED_ANALYSIS_COMPLETION_REPORT.md",
+        "word_count": 1025,
+        "line_count": 183,
+        "quality": "COMPREHENSIVE",
+        "scientific_score": 9
+      },
+      {
+        "file": "output/expanded_analysis/EXPANDED_POLICY_ANALYSIS_20250626_112947.md",
+        "word_count": 292,
+        "line_count": 54,
+        "quality": "BASIC",
+        "scientific_score": 6
+      },
+      {
+        "file": "output/expanded_analysis/DATA_VALIDATION_REPORT_20250626_120701.md",
+        "word_count": 259,
+        "line_count": 53,
+        "quality": "BASIC",
+        "scientific_score": 9
+      }
+    ],
+    "citation_analysis": [
+      {
+        "file": "SCIENTIFIC_RIGOR_ASSESSMENT.md",
+        "citation_indicators": 4,
+        "government_sources": 2,
+        "international_sources": 2
+      },
+      {
+        "file": "README.md",
+        "citation_indicators": 4,
+        "government_sources": 2,
+        "international_sources": 3
+      },
+      {
+        "file": "docs/DATA_REQUIREMENTS.md",
+        "citation_indicators": 3,
+        "government_sources": 5,
+        "international_sources": 0
+      }
+    ]
+  },
+  "validity_level": "MODERATE_SCIENTIFIC_VALIDITY",
+  "confidence_level": "GOOD",
+  "recommendations": [
+    "Add explicit citations and data sources"
+  ]
+}

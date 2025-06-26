@@ -1,0 +1,9 @@
+policy_id,assessment_date,scope,magnitude,durability,adaptability,cross_referencing,overall_score,assessor,notes
+HDB-001,2020-01-15T00:00:00,5,5,5,4,5,4.785714285714286,Sample Data Generator,
+HDB-001,2022-06-10T00:00:00,5,5,5,5,5,5.0,Sample Data Generator,
+CPF-001,2021-03-20T00:00:00,5,4,5,4,4,4.428571428571429,Sample Data Generator,
+GST-001,2019-11-05T00:00:00,4,3,4,3,3,3.4285714285714284,Sample Data Generator,
+GST-001,2023-02-15T00:00:00,4,3,4,4,3,3.642857142857143,Sample Data Generator,
+EDU-001,2020-08-12T00:00:00,4,4,3,5,4,3.9285714285714284,Sample Data Generator,
+HC-001,2021-12-03T00:00:00,4,4,4,3,4,3.7857142857142856,Sample Data Generator,
+DEMO-001,2025-06-25T23:43:23.481863,4,4,3,5,3,3.7857142857142856,Demo User,Initial assessment of digital government initiative

@@ -1,0 +1,18 @@
+Quick Test Report
+=================
+
+Test run: 2025-06-26 11:27:10.145112
+Policies: 2
+Assessments: 2
+
+Policy Details:
+- Housing Development Board (HDB) (1960)
+  Category: PolicyCategory.SOCIAL_WELFARE
+  Assessments: 1
+    Score: 4.79
+
+- Central Provident Fund (CPF) (1955)
+  Category: PolicyCategory.SOCIAL_WELFARE
+  Assessments: 1
+    Score: 4.79
+
