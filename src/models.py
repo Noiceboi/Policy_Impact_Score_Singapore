@@ -2,17 +2,58 @@
 Data models for the Policy Impact Assessment Framework.
 
 This module contains the core data structures for representing policies,
-assessments, and related entities in the framework.
+assessments, and related entities in the framework. All models follow
+PEP 257 docstring conventions and include comprehensive type hints.
+
+Classes:
+    PolicyCategory: Enumeration of policy categories in Vietnamese terms
+    AssessmentCriteria: Assessment criteria with validation
+    WeightingConfig: Configuration for criterion weights
+    PolicyAssessment: Assessment result for a policy
+    Policy: Represents a government policy
+    PolicyCollection: Collection of policies for analysis
+
+Example:
+    >>> from models import Policy, PolicyCategory, AssessmentCriteria
+    >>> policy = Policy(
+    ...     id="SGP_2023_001",
+    ...     name="Central Provident Fund",
+    ...     category=PolicyCategory.SOCIAL_WELFARE,
+    ...     implementation_year=2023
+    ... )
+    >>> criteria = AssessmentCriteria(scope=4, magnitude=5, durability=5)
 """
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union, Any
 from enum import Enum
+import logging
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 class PolicyCategory(Enum):
-    """Enumeration of policy categories in Vietnamese terms."""
+    """
+    Enumeration of policy categories in Vietnamese terms.
+    
+    This enum defines the standard policy categories used in the Singapore
+    policy impact assessment framework. Each category represents a major
+    area of government policy intervention.
+    
+    Attributes:
+        SOCIAL_WELFARE: Social welfare and security policies
+        URBAN_ORDER: Urban planning and order maintenance
+        ECONOMIC_FINANCIAL: Economic and financial policies
+        SOCIAL_WELLBEING: Social wellbeing and community policies
+        TAXATION: Tax policies and revenue generation
+        NATIONAL_SECURITY: National security and defense
+        CULTURE_SOCIETY: Cultural and social development
+        EDUCATION: Education and training policies
+        URBAN_DEVELOPMENT: Urban development and infrastructure
+        HEALTHCARE: Healthcare and public health policies
+    """
     SOCIAL_WELFARE = "An sinh xã hội"
     URBAN_ORDER = "Giữ gìn trật tự đô thị"
     ECONOMIC_FINANCIAL = "Kinh tế tài chính"
@@ -27,18 +68,78 @@ class PolicyCategory(Enum):
 
 @dataclass
 class AssessmentCriteria:
-    """Assessment criteria with scores and descriptions."""
-    scope: int = 0  # 0-5 scale
-    magnitude: int = 0  # 0-5 scale
-    durability: int = 0  # 0-5 scale
-    adaptability: int = 0  # 0-5 scale
-    cross_referencing: int = 0  # 0-5 scale
+    """
+    Assessment criteria with scores and validation.
     
-    def __post_init__(self):
-        """Validate that all scores are within the valid range."""
+    This class represents the core assessment dimensions used to evaluate
+    policy impact. Each criterion is scored on a 1-5 scale where:
+    - 1: Very Low Impact
+    - 2: Low Impact  
+    - 3: Moderate Impact
+    - 4: High Impact
+    - 5: Very High Impact
+    
+    Attributes:
+        scope (int): Geographic or demographic reach of the policy (1-5)
+        magnitude (int): Intensity or strength of policy effects (1-5)
+        durability (int): Long-term sustainability of policy impacts (1-5)
+        adaptability (int): Policy flexibility and responsiveness (1-5)
+        cross_referencing (int): Integration with other policies (1-5)
+    
+    Raises:
+        ValueError: If any score is outside the valid range [1-5]
+    
+    Example:
+        >>> criteria = AssessmentCriteria(
+        ...     scope=4, magnitude=5, durability=4, 
+        ...     adaptability=3, cross_referencing=4
+        ... )
+        >>> print(criteria.scope)
+        4
+    """
+    scope: int = 1
+    magnitude: int = 1
+    durability: int = 1
+    adaptability: int = 1
+    cross_referencing: int = 1
+    
+    def __post_init__(self) -> None:
+        """
+        Validate that all scores are within the valid range.
+        
+        Raises:
+            ValueError: If any criterion score is not between 1 and 5
+        """
         for field_name, value in self.__dict__.items():
-            if not 0 <= value <= 5:
-                raise ValueError(f"{field_name} must be between 0 and 5, got {value}")
+            if not isinstance(value, int) or not 1 <= value <= 5:
+                raise ValueError(
+                    f"{field_name} must be an integer between 1 and 5, got {value}"
+                )
+                
+    def to_dict(self) -> Dict[str, int]:
+        """
+        Convert assessment criteria to dictionary.
+        
+        Returns:
+            Dict[str, int]: Dictionary with criterion names as keys and scores as values
+        """
+        return {
+            'scope': self.scope,
+            'magnitude': self.magnitude,
+            'durability': self.durability,
+            'adaptability': self.adaptability,
+            'cross_referencing': self.cross_referencing
+        }
+    
+    def average_score(self) -> float:
+        """
+        Calculate the arithmetic mean of all criteria scores.
+        
+        Returns:
+            float: Average score across all criteria
+        """
+        scores = list(self.to_dict().values())
+        return sum(scores) / len(scores)
 
 
 @dataclass

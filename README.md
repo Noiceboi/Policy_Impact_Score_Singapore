@@ -48,6 +48,94 @@ Policy_Impact_Score_Singapore/
 
 ## 🚀 Quick Start
 
+### Prerequisites
+- Python 3.8 or higher
+- Git
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Noiceboi/Policy_Impact_Score_Singapore.git  
+cd Policy_Impact_Score_Singapore
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install development dependencies (optional)
+pip install -r requirements-dev.txt
+
+# Set up pre-commit hooks (for developers)
+pre-commit install
+
+# Run the framework
+python main.py
+```
+
+### Basic Usage
+
+```python
+from src.framework import PolicyAssessmentFramework
+from src.models import Policy, AssessmentCriteria, PolicyCategory
+
+# Initialize framework
+framework = PolicyAssessmentFramework()
+
+# Create a policy
+policy = Policy(
+    id="SGP_2023_001",
+    name="Central Provident Fund Enhancement",
+    category=PolicyCategory.SOCIAL_WELFARE,
+    implementation_year=2023
+)
+
+# Assess the policy
+criteria = AssessmentCriteria(
+    scope=4, magnitude=5, durability=5,
+    adaptability=4, cross_referencing=4
+)
+
+assessment = framework.assess_policy(policy, criteria.to_dict())
+print(f"Impact Score: {assessment.overall_score:.2f}")
+```
+
+### Advanced MCDA Analysis
+
+```python
+from src.mcda import AdvancedMCDAFramework
+import pandas as pd
+
+# Load data
+policies_df = pd.read_csv("data/sample_policies.csv")
+assessments_df = pd.read_csv("data/sample_assessments.csv")
+
+# Set up MCDA framework
+mcda = AdvancedMCDAFramework()
+
+# Define pairwise comparisons for AHP
+pairwise_comparisons = {
+    ("durability", "magnitude"): 2,  # Durability twice as important
+    ("durability", "adaptability"): 1.5,
+    ("magnitude", "scope"): 1.2,
+}
+
+# Run comprehensive analysis with sensitivity testing
+results = mcda.comprehensive_analysis(
+    criteria_scores=assessments_df[['scope', 'magnitude', 'durability', 'adaptability', 'cross_referencing']],
+    pairwise_comparisons=pairwise_comparisons,
+    policy_names=policies_df['name'].tolist()
+)
+
+print(f"AHP Consistency Ratio: {results.consistency_ratio:.3f}")
+print("Top 3 Policies:")
+for policy, score in sorted(results.scores.items(), key=lambda x: x[1], reverse=True)[:3]:
+    print(f"  {policy}: {score:.2f}")
+```
+
 ### 1. Installation
 
 ```bash

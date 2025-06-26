@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Test - Local</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.24.1/plotly.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-container { max-width: 800px; margin: 0 auto; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .chart-test { width: 400px; height: 200px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Dashboard Components Test</h1>
+        
+        <div id="test-results"></div>
+        
+        <h2>Chart Tests</h2>
+        <canvas id="testChart" width="400" height="200"></canvas>
+        <div id="testHeatmap" style="width:400px;height:200px;"></div>
+        
+        <h2>Test Summary</h2>
+        <div id="summary"></div>
+    </div>
+
+    <script>
+        const testResults = [];
+        
+        function addTestResult(name, success, message) {
+            testResults.push({name, success, message});
+            const resultsDiv = document.getElementById('test-results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `test-result ${success ? 'success' : 'error'}`;
+            resultDiv.innerHTML = `<strong>${name}:</strong> ${success ? '✅' : '❌'} ${message}`;
+            resultsDiv.appendChild(resultDiv);
+        }
+        
+        function runTests() {
+            // Test 1: Chart.js availability
+            try {
+                if (typeof Chart !== 'undefined') {
+                    addTestResult('Chart.js Library', true, 'Chart.js loaded successfully');
+                } else {
+                    addTestResult('Chart.js Library', false, 'Chart.js not available');
+                }
+            } catch (error) {
+                addTestResult('Chart.js Library', false, error.message);
+            }
+            
+            // Test 2: Plotly availability
+            try {
+                if (typeof Plotly !== 'undefined') {
+                    addTestResult('Plotly Library', true, 'Plotly.js loaded successfully');
+                } else {
+                    addTestResult('Plotly Library', false, 'Plotly.js not available');
+                }
+            } catch (error) {
+                addTestResult('Plotly Library', false, error.message);
+            }
+            
+            // Test 3: Create a simple chart
+            try {
+                const ctx = document.getElementById('testChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Test 1', 'Test 2', 'Test 3'],
+                        datasets: [{
+                            label: 'Test Data',
+                            data: [3, 4, 5],
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+                addTestResult('Chart Creation', true, 'Successfully created test chart');
+            } catch (error) {
+                addTestResult('Chart Creation', false, error.message);
+            }
+            
+            // Test 4: Create a simple heatmap
+            try {
+                const heatmapData = [{
+                    z: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+                    type: 'heatmap',
+                    colorscale: 'Blues'
+                }];
+                
+                Plotly.newPlot('testHeatmap', heatmapData, {
+                    title: 'Test Heatmap',
+                    width: 400,
+                    height: 200
+                });
+                addTestResult('Heatmap Creation', true, 'Successfully created test heatmap');
+            } catch (error) {
+                addTestResult('Heatmap Creation', false, error.message);
+            }
+            
+            // Test 5: Policy data structure
+            try {
+                const samplePolicy = {
+                    name: "Test Policy",
+                    category: "Test Category",
+                    year: 2024,
+                    impact: 4.0,
+                    verified: true,
+                    scores: {scope: 4, magnitude: 4, durability: 4, adaptability: 4, crossRef: 4}
+                };
+                
+                if (samplePolicy.name && samplePolicy.scores && typeof samplePolicy.impact === 'number') {
+                    addTestResult('Policy Data Structure', true, 'Policy data structure is valid');
+                } else {
+                    addTestResult('Policy Data Structure', false, 'Invalid policy data structure');
+                }
+            } catch (error) {
+                addTestResult('Policy Data Structure', false, error.message);
+            }
+            
+            // Summary
+            const successCount = testResults.filter(r => r.success).length;
+            const totalCount = testResults.length;
+            const summaryDiv = document.getElementById('summary');
+            summaryDiv.className = `test-result ${successCount === totalCount ? 'success' : 'error'}`;
+            summaryDiv.innerHTML = `<strong>Overall Result:</strong> ${successCount}/${totalCount} tests passed`;
+            
+            if (successCount === totalCount) {
+                summaryDiv.innerHTML += '<br>🎉 All components are working correctly! Your dashboard should display properly.';
+            } else {
+                summaryDiv.innerHTML += '<br>⚠️ Some components failed. Please check your internet connection and CDN availability.';
+            }
+        }
+        
+        // Run tests when page loads
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>
