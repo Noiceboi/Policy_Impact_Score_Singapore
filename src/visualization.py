@@ -16,7 +16,7 @@ from datetime import datetime
 from typing import Dict, List, Optional, Any, Union
 from pathlib import Path
 
-from models import Policy, PolicyCollection, PolicyCategory
+from .models import Policy, PolicyCollection, PolicyCategory
 
 
 class PolicyVisualizer:

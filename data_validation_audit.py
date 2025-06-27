@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 # Add our framework
 sys.path.append('src')
-from utils import setup_logging
+from src.utils import setup_logging
 
 
 class DataValidationAuditor:

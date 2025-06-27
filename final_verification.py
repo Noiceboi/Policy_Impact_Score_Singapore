@@ -136,21 +136,20 @@ def main():
     # Quick import test
     print("\n🔧 Quick Import Test:")
     print("-" * 19)
-    
     try:
         sys.path.insert(0, 'src')
-        from models import Policy, PolicyAssessment
-        from framework import PolicyAssessmentFramework
+        from src.models import Policy, PolicyAssessment
+        from src.framework import PolicyAssessmentFramework
         print("✅ Core imports working")
         
         try:
-            from mcda import AHPAnalyzer, ELECTREAnalyzer
+            from src.mcda import AHPProcessor, ELECTREAnalyzer
             print("✅ Advanced MCDA methods available")
         except ImportError as e:
             print(f"⚠️ MCDA import issue: {e}")
-        
+            
         try:
-            from validation import DataValidator
+            from src.validation import DataValidator
             print("✅ Data validation available")
         except ImportError as e:
             print(f"⚠️ Validation import issue: {e}")

@@ -27,7 +27,7 @@ def main():
     print("-" * 50)
     
     try:
-        from validation import DataValidator
+        from src.validation import DataValidator
         validator = DataValidator()
         
         # Create sample data
@@ -58,7 +58,7 @@ def main():
     print("-" * 50)
     
     try:
-        from mcda import AdvancedMCDAFramework
+        from src.mcda import AdvancedMCDAFramework
         
         # Sample criteria scores
         criteria_scores = pd.DataFrame({
@@ -103,7 +103,7 @@ def main():
     print("-" * 50)
     
     try:
-        from report_generator import ReportGenerator
+        from src.report_generator import ReportGenerator
         
         # Sample data for report
         policies_df = pd.DataFrame({
@@ -136,7 +136,7 @@ def main():
     print("-" * 50)
     
     try:
-        from utils.dashboard import DashboardGenerator, ChartStyler
+        from src.utils.dashboard import DashboardGenerator, ChartStyler
         
         dashboard_gen = DashboardGenerator()
         styler = ChartStyler()

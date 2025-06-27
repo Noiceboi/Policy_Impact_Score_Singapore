@@ -14,7 +14,7 @@ from typing import Dict, List, Any, Optional, Union, Tuple
 from pathlib import Path
 import logging
 
-from models import Policy, PolicyAssessment, AssessmentCriteria, PolicyCategory
+from .models import Policy, PolicyAssessment, AssessmentCriteria, PolicyCategory
 
 
 def setup_logging(level: str = "INFO") -> logging.Logger:

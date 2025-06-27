@@ -13,7 +13,7 @@ from scipy import stats
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 
-from models import Policy, PolicyAssessment, PolicyCollection
+from .models import Policy, PolicyAssessment, PolicyCollection
 
 
 class PolicyAnalyzer:

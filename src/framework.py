@@ -23,17 +23,17 @@ from typing import Dict, List, Optional, Union, Tuple, Any
 from pathlib import Path
 import logging
 
-from models import (
+from .models import (
     Policy, PolicyAssessment, AssessmentCriteria, WeightingConfig,
     PolicyCategory, PolicyCollection
 )
-from analysis import PolicyAnalyzer
-from visualization import PolicyVisualizer
-from scientific_foundation import (
+from .analysis import PolicyAnalyzer
+from .visualization import PolicyVisualizer
+from .scientific_foundation import (
     get_scientific_foundation, validate_methodological_compliance,
     generate_scientific_citation
 )
-from logging_config import get_logger
+from .logging_config import get_logger
 
 logger = get_logger(__name__)
 

@@ -31,10 +31,10 @@ warnings.filterwarnings('ignore')
 
 # Add our framework
 sys.path.append('src')
-from framework import PolicyAssessmentFramework
-from cross_reference import CrossReferenceDataCollector
-from models import Policy
-from utils import setup_logging
+from src.framework import PolicyAssessmentFramework
+from src.cross_reference import CrossReferenceDataCollector
+from src.models import Policy
+from src.utils import setup_logging
 
 
 class ExpandedPolicyAnalyzer:

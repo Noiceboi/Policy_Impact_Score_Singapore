@@ -24,8 +24,8 @@ warnings.filterwarnings('ignore')
 
 # Add our framework
 sys.path.append('src')
-from framework import PolicyAssessmentFramework
-from models import Policy, PolicyAssessment
+from src.framework import PolicyAssessmentFramework
+from src.models import Policy, PolicyAssessment
 
 
 class CrossStudyDashboard:
@@ -60,7 +60,7 @@ class CrossStudyDashboard:
                 # Convert to Policy objects
                 self.policies_data = []
                 for _, row in policies_df.iterrows():
-                    from models import Policy
+                    from src.models import Policy
                     policy = Policy(
                         name=row['policy_name'],
                         category_name=row['category'],
@@ -80,7 +80,7 @@ class CrossStudyDashboard:
                 # Convert to Assessment objects
                 self.assessments_data = []
                 for _, row in assessments_df.iterrows():
-                    from models import PolicyAssessment
+                    from src.models import PolicyAssessment
                     assessment = PolicyAssessment(
                         policy_name=self.get_policy_name_by_id(row['policy_id']),
                         assessment_date=pd.to_datetime(row['assessment_date']),

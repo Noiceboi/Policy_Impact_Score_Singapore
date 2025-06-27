@@ -11,7 +11,7 @@ __email__ = "policy-assessment@example.com"
 
 from .models import Policy, PolicyAssessment, PolicyCollection
 from .framework import PolicyAssessmentFramework
-from .mcda import AHPAnalyzer, ELECTREAnalyzer, SensitivityAnalyzer
+from .mcda import AHPProcessor, ELECTREProcessor, SensitivityAnalyzer, AdvancedMCDAFramework
 from .validation import DataValidator
 
 __all__ = [
@@ -19,8 +19,9 @@ __all__ = [
     "PolicyAssessment", 
     "PolicyCollection",
     "PolicyAssessmentFramework",
-    "AHPAnalyzer",
-    "ELECTREAnalyzer",
+    "AHPProcessor",
+    "ELECTREProcessor",
     "SensitivityAnalyzer",
+    "AdvancedMCDAFramework",
     "DataValidator",
 ]
