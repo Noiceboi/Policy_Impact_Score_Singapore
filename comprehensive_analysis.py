@@ -24,7 +24,7 @@ sys.path.append('src')
 from src.framework import PolicyAssessmentFramework
 from src.cross_reference import CrossReferenceDataCollector
 from src.models import Policy
-from src.utils import setup_logging
+from src.utils_main import setup_logging
 
 
 class ComprehensivePolicyAnalyzer:

@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore')
 sys.path.append('src')
 from src.framework import PolicyAssessmentFramework
 from src.models import Policy
-from src.utils import setup_logging
+from src.utils_main import setup_logging
 
 
 class SimplifiedExpandedAnalyzer:

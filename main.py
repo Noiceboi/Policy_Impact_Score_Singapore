@@ -21,8 +21,7 @@ sys.path.append(str(Path(__file__).parent))
 
 from src.framework import PolicyAssessmentFramework
 from src.models import Policy, AssessmentCriteria, PolicyAssessment
-from src.utils import setup_logging
-from src.utils import create_sample_data
+from src.utils_main import setup_logging, create_sample_data
 from src.scientific_foundation import get_scientific_foundation, generate_scientific_citation
 
 

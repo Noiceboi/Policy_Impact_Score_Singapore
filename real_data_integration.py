@@ -15,7 +15,7 @@ sys.path.append('src')
 
 from src.framework import PolicyAssessmentFramework
 from src.models import Policy, AssessmentCriteria, PolicyAssessment, PolicyCategory
-from src.utils import setup_logging, validate_data_consistency
+from src.utils_main import setup_logging, validate_data_consistency
 
 
 class RealDataIntegrator:

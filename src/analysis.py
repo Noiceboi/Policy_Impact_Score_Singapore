@@ -324,7 +324,7 @@ class PolicyAnalyzer:
         Returns:
             Dictionary with concatenation analysis results
         """
-        from .utils import (analyze_temporal_impact_patterns, 
+        from .utils_main import (analyze_temporal_impact_patterns, 
                            identify_policy_interconnections,
                            calculate_policy_maturity_index)
         
@@ -363,7 +363,7 @@ class PolicyAnalyzer:
         Returns:
             Dictionary with contextual timing analysis
         """
-        from .utils import detect_contextual_timing_advantage
+        from .utils_main import detect_contextual_timing_advantage
         
         timing_analysis = detect_contextual_timing_advantage(policies)
         

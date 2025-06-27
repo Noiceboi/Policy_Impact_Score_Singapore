@@ -499,7 +499,7 @@ class PolicyAssessmentFramework:
         Returns:
             List of slow burn policies with analysis
         """
-        from .utils import analyze_temporal_impact_patterns
+        from .utils_main import analyze_temporal_impact_patterns
         
         temporal_patterns = analyze_temporal_impact_patterns(self.policies.policies)
         slow_burn_policies = temporal_patterns.get('slow_burn_policies', [])
@@ -525,7 +525,7 @@ class PolicyAssessmentFramework:
         Returns:
             List of timely response policies
         """
-        from .utils import detect_contextual_timing_advantage
+        from .utils_main import detect_contextual_timing_advantage
         
         timing_analysis = detect_contextual_timing_advantage(self.policies.policies)
         
@@ -555,7 +555,7 @@ class PolicyAssessmentFramework:
         Returns:
             Dictionary with maturity distribution analysis
         """
-        from .utils import calculate_policy_maturity_index
+        from .utils_main import calculate_policy_maturity_index
         
         maturity_data = {}
         maturity_stages = {
