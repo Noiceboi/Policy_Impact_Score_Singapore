@@ -10,7 +10,184 @@
     
     <link rel="stylesheet" href="../assets/css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
-    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>        <style>        body {            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;            background-color: #f5f7fa;            margin: 0;            padding: 0;        }                .dashboard-container {            max-width: 1400px;            margin: 0 auto;            padding: 20px;        }                .header-section {            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            color: white;            padding: 40px;            border-radius: 15px;            margin-bottom: 30px;            text-align: center;        }                .header-section h1 {            font-size: 2.5em;            margin-bottom: 10px;        }                .header-section p {            font-size: 1.2em;            opacity: 0.9;        }                .stats-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));            gap: 20px;            margin-bottom: 30px;        }                .stat-card {            background: linear-gradient(135deg, #2C5282, #4299E1);            color: white;            padding: 25px;            border-radius: 15px;            text-align: center;            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);            transition: transform 0.3s ease;        }                .stat-card:hover {            transform: translateY(-5px);        }                .stat-value {            font-size: 2.5em;            font-weight: bold;            margin-bottom: 10px;        }                .stat-label {            font-size: 1em;            opacity: 0.9;        }                .dashboard-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));            gap: 25px;            margin-bottom: 30px;        }                .chart-container {            background: white;            border-radius: 15px;            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);            padding: 25px;            min-height: 400px;        }                .chart-title {            font-size: 1.3em;            font-weight: bold;            margin-bottom: 20px;            color: #2C5282;            text-align: center;            padding-bottom: 15px;            border-bottom: 3px solid #e2e8f0;        }                .filters-section {            background: white;            padding: 25px;            border-radius: 15px;            margin-bottom: 30px;            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);        }                .filter-group {            display: flex;            flex-wrap: wrap;            gap: 20px;            align-items: center;        }                .filter-group label {            font-weight: bold;            color: #2C5282;            min-width: 120px;        }                .filter-group select, .filter-group input {            padding: 10px 15px;            border: 2px solid #e2e8f0;            border-radius: 8px;            font-size: 14px;            transition: border-color 0.3s ease;        }                .filter-group select:focus, .filter-group input:focus {            outline: none;            border-color: #4299E1;        }                .data-table-container {            background: white;            border-radius: 15px;            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);            overflow: hidden;            margin-top: 30px;        }                .data-table {            width: 100%;            border-collapse: collapse;        }                .data-table th, .data-table td {            padding: 15px;            text-align: left;            border-bottom: 1px solid #e2e8f0;        }                .data-table th {            background: #2C5282;            color: white;            font-weight: bold;        }                .data-table tr:hover {            background: #f7fafc;        }                .export-buttons {            margin: 20px 0;            text-align: center;        }                .export-btn {            background: #4299E1;            color: white;            padding: 10px 20px;            border: none;            border-radius: 8px;            margin: 0 10px;            cursor: pointer;            transition: background 0.3s ease;        }                .export-btn:hover {            background: #2C5282;        }                .nav-bar {
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header-section p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #2C5282, #4299E1);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-height: 300px;
+            max-height: 380px;
+        }
+        
+        .chart-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2C5282;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .filters-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .filter-group label {
+            font-weight: bold;
+            color: #2C5282;
+            min-width: 120px;
+        }
+        
+        .filter-group select, .filter-group input {
+            padding: 10px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .filter-group select:focus, .filter-group input:focus {
+            outline: none;
+            border-color: #4299E1;
+        }
+        
+        .data-table-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .data-table th {
+            background: #2C5282;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .data-table tr:hover {
+            background: #f7fafc;
+        }
+        
+        .export-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .export-btn {
+            background: #4299E1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .export-btn:hover {
+            background: #2C5282;
+        }
+        
+        .nav-bar {
             background: #2C5282;
             padding: 15px 0;
             margin-bottom: 30px;
@@ -44,6 +221,32 @@
             font-style: italic;
         }
         
+        .table-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .compact-table {
+            font-size: 0.9em;
+        }
+        
+        .compact-table th, .compact-table td {
+            padding: 8px 10px;
+        }
+        
+        .score-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        
+        .score-high { background: #d1ecf1; color: #0c5460; }
+        .score-medium { background: #fff3cd; color: #856404; }
+        .score-low { background: #f8d7da; color: #721c24; }
+        
         @media (max-width: 768px) {
             .dashboard-grid {
                 grid-template-columns: 1fr;
@@ -56,6 +259,10 @@
             .filter-group {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            
+            .table-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -135,32 +342,32 @@
             <!-- Policy Impact by Category -->
             <div class="chart-container">
                 <div class="chart-title">📊 Policy Impact by Category</div>
-                <canvas id="categoryChart" width="400" height="300"></canvas>
+                <canvas id="categoryChart" width="350" height="250"></canvas>
             </div>
 
             <!-- Implementation Timeline -->
             <div class="chart-container">
                 <div class="chart-title">📈 Policy Implementation Timeline</div>
-                <canvas id="timelineChart" width="400" height="300"></canvas>
+                <canvas id="timelineChart" width="350" height="250"></canvas>
             </div>
 
             <!-- Scoring Dimensions -->
             <div class="chart-container">
                 <div class="chart-title">🎯 Average Scoring Dimensions</div>
-                <canvas id="dimensionsChart" width="400" height="300"></canvas>
+                <canvas id="dimensionsChart" width="350" height="250"></canvas>
             </div>
 
             <!-- Verification Status -->
             <div class="chart-container">
                 <div class="chart-title">✅ Policy Verification Status</div>
-                <canvas id="verificationChart" width="400" height="300"></canvas>
+                <canvas id="verificationChart" width="350" height="250"></canvas>
             </div>
         </div>
 
         <!-- International Validation Heatmap -->
         <div class="chart-container" style="grid-column: 1/-1;">
             <div class="chart-title">🌍 International Validation Heatmap</div>
-            <div id="heatmapChart" style="height: 500px;"></div>
+            <div id="heatmapChart" style="height: 400px;"></div>
         </div>
 
         <!-- Export Options -->
@@ -170,7 +377,48 @@
             <button class="export-btn" onclick="exportCharts()">📊 Export Charts</button>
         </div>
 
-        <!-- Data Table -->
+        <!-- New Analysis Tables -->
+        <div class="table-grid">
+            <!-- Impact Score Ranking Table -->
+            <div class="data-table-container">
+                <div class="chart-title">🏆 Policy Impact Score Ranking</div>
+                <table class="data-table compact-table" id="impactScoreTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Policy Name</th>
+                            <th>Impact Score</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="impactScoreTableBody">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category Analysis Table -->
+            <div class="data-table-container">
+                <div class="chart-title">📊 Analysis by Category</div>
+                <table class="data-table compact-table" id="categoryAnalysisTable">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Policies</th>
+                            <th>Avg Score</th>
+                            <th>Highest</th>
+                            <th>Lowest</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoryAnalysisTableBody">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detailed Policy Data Table -->
         <div class="data-table-container">
             <div class="chart-title">📋 Detailed Policy Data</div>
             <table class="data-table" id="policyTable">
@@ -315,6 +563,8 @@
                 try {
                     initializeCharts();
                     populateTable();
+                    populateImpactScoreTable();
+                    populateCategoryAnalysisTable();
                     setupFilters();
                     updateStatistics();
                     
@@ -601,8 +851,8 @@
                     tickangle: -45
                 },
                 yaxis: { title: 'Policy Initiatives' },
-                margin: { t: 80, r: 120, b: 150, l: 250 },
-                height: 500,
+                margin: { t: 60, r: 100, b: 120, l: 200 },
+                height: 400,
                 plot_bgcolor: 'white',
                 paper_bgcolor: 'white'
             };
@@ -643,6 +893,8 @@
             console.log(`🔍 Filters applied: ${filteredPolicies.length} policies match criteria`);
             updateCharts();
             populateTable();
+            populateImpactScoreTable();
+            populateCategoryAnalysisTable();
             updateStatistics();
         }
 
@@ -673,6 +925,69 @@
                             📋 View Details
                         </button>
                     </td>
+                `;
+            });
+        }
+
+        // Populate impact score ranking table
+        function populateImpactScoreTable() {
+            const tbody = document.getElementById('impactScoreTableBody');
+            tbody.innerHTML = '';
+            
+            // Sort policies by impact score (descending)
+            const sortedPolicies = [...filteredPolicies].sort((a, b) => b.impact_score - a.impact_score);
+            
+            sortedPolicies.forEach((policy, index) => {
+                const row = tbody.insertRow();
+                const scoreClass = policy.impact_score >= 4 ? 'score-high' : 
+                                 policy.impact_score >= 3 ? 'score-medium' : 'score-low';
+                
+                row.innerHTML = `
+                    <td><strong>#${index + 1}</strong></td>
+                    <td><strong>${policy.name.length > 30 ? policy.name.substring(0, 30) + '...' : policy.name}</strong></td>
+                    <td><span class="score-badge ${scoreClass}">${policy.impact_score.toFixed(1)}</span></td>
+                    <td><span style="background: #e2e8f0; padding: 3px 6px; border-radius: 3px; font-size: 0.8em;">${policy.category}</span></td>
+                    <td>${policy.verification_status === 'Verified' ? '✅' : policy.verification_status === 'Under Review' ? '⏳' : '❌'}</td>
+                `;
+            });
+        }
+
+        // Populate category analysis table
+        function populateCategoryAnalysisTable() {
+            const tbody = document.getElementById('categoryAnalysisTableBody');
+            tbody.innerHTML = '';
+            
+            // Group policies by category
+            const categoryStats = {};
+            filteredPolicies.forEach(policy => {
+                if (!categoryStats[policy.category]) {
+                    categoryStats[policy.category] = {
+                        policies: [],
+                        scores: []
+                    };
+                }
+                categoryStats[policy.category].policies.push(policy);
+                categoryStats[policy.category].scores.push(policy.impact_score);
+            });
+            
+            // Calculate statistics for each category
+            Object.keys(categoryStats).forEach(category => {
+                const stats = categoryStats[category];
+                const scores = stats.scores;
+                const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
+                const highest = Math.max(...scores);
+                const lowest = Math.min(...scores);
+                
+                const row = tbody.insertRow();
+                const avgClass = avgScore >= 4 ? 'score-high' : 
+                               avgScore >= 3 ? 'score-medium' : 'score-low';
+                
+                row.innerHTML = `
+                    <td><strong>${category}</strong></td>
+                    <td><span style="background: #2C5282; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.8em;">${stats.policies.length}</span></td>
+                    <td><span class="score-badge ${avgClass}">${avgScore.toFixed(1)}</span></td>
+                    <td><span style="color: #28a745; font-weight: bold;">${highest.toFixed(1)}</span></td>
+                    <td><span style="color: #dc3545; font-weight: bold;">${lowest.toFixed(1)}</span></td>
                 `;
             });
         }
